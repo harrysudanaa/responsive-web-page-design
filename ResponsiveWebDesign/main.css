@@ -1,0 +1,433 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav .menu {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 50px;
+  background-color: #222831;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 5rem;
+  align-items: center;
+}
+nav .menu a {
+  color: #00ADB5;
+  text-decoration: none;
+}
+nav .menu .logo a {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 3px;
+}
+nav .menu .menu-toggle {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .menu .menu-toggle ul.navbar {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  padding: 3rem 0;
+  font-size: 0.8em;
+}
+nav .menu .menu-toggle ul.navbar li {
+  padding: 0 1rem;
+}
+nav .menu .menu-toggle ul.navbar li a:hover {
+  color: #EEEEEE;
+}
+nav .menu .menu-toggle input {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 32px;
+  height: 24px;
+  top: -5px;
+  left: -6px;
+  opacity: 0;
+  cursor: pointer;
+}
+nav .menu .menu-toggle span {
+  display: none;
+  width: 28px;
+  height: 3px;
+  background-color: #EEEEEE;
+  transition: all 0.5s;
+}
+
+section.jumbotron {
+  font-family: "Poppins", sans-serif;
+  color: #00ADB5;
+  background-color: #393E46;
+  text-align: center;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+}
+section.jumbotron .profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #00ADB5;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+section.jumbotron .profile-img img {
+  width: 150px;
+  height: 200px;
+  margin-top: -0.3rem;
+}
+section.jumbotron h1 {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+section.jumbotron p {
+  font-size: 20px;
+}
+
+section#about {
+  text-align: center;
+}
+section#about .container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas: "title title" "content1 content1" "mySkill1 mySkill2" "mySkill3 mySkill4";
+  padding: 5rem 3rem;
+}
+section#about .container h1.title {
+  grid-area: title;
+  padding-bottom: 1rem;
+  font-size: 32px;
+}
+section#about .container p {
+  line-height: 24px;
+}
+section#about .container p.content1 {
+  grid-area: content1;
+  padding: 1rem;
+}
+section#about .container .card-skill {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+section#about .container .card-skill h3 {
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  text-align: left;
+}
+section#about .container .card-skill .range {
+  font-size: 12px;
+  background-color: #00ADB5;
+  width: 100%;
+}
+section#about .container .card-skill .range .range-filled {
+  background-color: #222831;
+  color: #00ADB5;
+  padding: 1px;
+}
+section#about .container .card-skill .range .range-filled.html {
+  width: 60%;
+}
+section#about .container .card-skill .range .range-filled.css {
+  width: 50%;
+}
+section#about .container .card-skill .range .range-filled.php {
+  width: 20%;
+}
+section#about .container .card-skill .range .range-filled.js {
+  width: 20%;
+}
+section#about .container .card-skill.skill1 {
+  grid-area: mySkill1;
+}
+section#about .container .card-skill.skill2 {
+  grid-area: mySkill2;
+}
+section#about .container .card-skill.skill3 {
+  grid-area: mySkill3;
+}
+section#about .container .card-skill.skill4 {
+  grid-area: mySkill4;
+}
+
+section#project .container {
+  background-color: #393E46;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas: "title title" "card1 card2";
+  justify-content: space-evenly;
+}
+section#project .container h1 {
+  grid-area: title;
+  padding: 0 0 3rem 0;
+  font-size: 32px;
+  text-align: center;
+  color: #00ADB5;
+}
+section#project .container .card-container.myProject1 {
+  grid-area: card1;
+}
+section#project .container .card-container.myProject2 {
+  grid-area: card2;
+}
+section#project .container .card-container {
+  border: 1px solid #00ADB5;
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+  margin: auto;
+  background-color: #EEEEEE;
+  box-shadow: 0px 0px 5px 2px rgba(238, 238, 238, 0.1);
+}
+section#project .container .card-container .card .image img {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px 10px 0 0;
+  padding-left: 2rem;
+}
+section#project .container .card-container .card .desc {
+  box-sizing: border-box;
+  margin: -1rem 0 0 0;
+  padding: 1rem 1rem;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: lightgray;
+  border-radius: 0 0 10px 10px;
+}
+section#project .container .card-container .card .desc h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+section#project .container .card-container .card .desc p {
+  font-size: 16px;
+}
+
+section#contact .container {
+  padding: 2rem 0;
+}
+section#contact .container h1 {
+  font-size: 32px;
+  text-align: center;
+}
+section#contact .container .form-container {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-areas: "title" "input1" "input2" "input3" "button";
+  justify-content: center;
+  padding: 2rem 0;
+}
+section#contact .container .form-container form ul li {
+  padding: 0.5rem 0;
+}
+section#contact .container .form-container form ul li label {
+  display: block;
+  padding: 0.3rem 0;
+}
+section#contact .container .form-container form ul li input {
+  width: 70vh;
+  height: 5vh;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+}
+section#contact .container .form-container form ul li input:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px rgba(0, 173, 181, 0.5);
+}
+section#contact .container .form-container form ul li textarea {
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+}
+section#contact .container .form-container form ul li textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px rgba(0, 173, 181, 0.5);
+}
+section#contact .container .form-container form ul button {
+  border-radius: 3px;
+  width: 80px;
+  height: 30px;
+  border: none;
+  background-color: #222831;
+  color: #00ADB5;
+  cursor: pointer;
+}
+section#contact .container .form-container form ul button:hover {
+  box-shadow: 0px 0px 5px 2px rgba(128, 128, 128, 0.5);
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  background-color: #222831;
+}
+footer p {
+  padding: 1rem;
+  color: #00ADB5;
+}
+
+nav .menu .menu-toggle span:nth-child(2) {
+  transform-origin: 10% 0;
+}
+nav .menu .menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+nav .menu .menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg);
+}
+nav .menu .menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+nav .menu .menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  nav .menu {
+    justify-content: space-between;
+    padding: 0 2.5rem;
+  }
+  nav .menu .menu-toggle input {
+    display: none;
+  }
+  nav .menu .menu-toggle span {
+    display: none;
+  }
+  section#contact .container h1 {
+    margin-top: 3rem;
+  }
+  section#contact .container .form-container form ul li input {
+    width: 81vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  nav .menu .logo a {
+    padding-right: 7rem;
+  }
+  nav .menu .menu-toggle {
+    height: 20px;
+  }
+  nav .menu .menu-toggle ul.navbar {
+    background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20vh;
+    height: 100vh;
+    z-index: -1;
+    transform: translate(100%, 0);
+    transition: all 0.5s;
+  }
+  nav .menu .menu-toggle ul.navbar li {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #393E46;
+  }
+  nav .menu .menu-toggle ul.navbar li a:hover {
+    color: #EEEEEE;
+  }
+  nav .menu .menu-toggle input {
+    display: inherit;
+  }
+  nav .menu .menu-toggle input:checked ~ ul.navbar {
+    transform: none;
+  }
+  nav .menu .menu-toggle span {
+    display: inherit;
+  }
+  section#about {
+    margin: -1rem 0;
+  }
+  section#about .container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(1, auto);
+    grid-template-areas: "title" "content1" "mySkill1" "mySkill2" "mySkill3" "mySkill4";
+  }
+  section#project .container {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-areas: "title" "card1" "card2";
+  }
+  section#project .container h1 {
+    margin-bottom: -2rem;
+  }
+  section#project .container .card-container {
+    margin: 1rem 0;
+  }
+  section#contact .container .form-container form ul li input {
+    width: 30vh;
+    height: 25px;
+  }
+  section#contact .container .form-container form ul li textarea {
+    width: 30vh;
+  }
+}/*# sourceMappingURL=main.css.map */
